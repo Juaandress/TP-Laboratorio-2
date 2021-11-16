@@ -8,8 +8,8 @@ public class Reserva {
     boolean precio;
 
     public Reserva(String fechainicio, String fechafin, boolean precio) {
-        this.coleccionAuto = new LinkedList<Auto>();
-        this.coleccionCliente = new LinkedList<Cliente>();
+        this.coleccionAuto = new LinkedList<Auto>();//crea una coleccion vacia
+        this.coleccionCliente = new LinkedList<Cliente>();//crea una coleccion vacia
         this.fechainicio = fechainicio;
         this.fechafin = fechafin;
         this.precio = precio;

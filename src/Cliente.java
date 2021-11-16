@@ -9,8 +9,8 @@ public class Cliente extends Persona{
         this.nombre = nombre;
         this.direccion = direccion;
         this.cuil = cuil;
-        this.coleccionautoAuto = new LinkedList<Auto>();
-        this.coleccionReserva = new LinkedList<Reserva>();
+        this.coleccionautoAuto = new LinkedList<Auto>();//crea una coleccion vacia
+        this.coleccionReserva = new LinkedList<Reserva>();//crea una coleccion vacia
     }
 
     public Cliente(LinkedList<Auto> coleccionautoAuto,LinkedList<Reserva> coleccionReserva) {

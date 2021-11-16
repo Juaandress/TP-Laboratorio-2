@@ -21,9 +21,9 @@ public class Concesionario {
     public Concesionario(String nombre, int cuil) {
         this.nombre= nombre;
         this.cuil=cuil;
-        this.coleccionAuto = new LinkedList<Auto>();
-        this.coleccionCliente = new LinkedList<Cliente>();
-        this.coleccionEmpleado = new LinkedList<Empleado>();
+        this.coleccionAuto = new LinkedList<Auto>();//crea una coleccion vacia
+        this.coleccionCliente = new LinkedList<Cliente>();//crea una coleccion vacia
+        this.coleccionEmpleado = new LinkedList<Empleado>();//crea una coleccion vacia
 
     }
 
