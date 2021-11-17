@@ -1,10 +1,10 @@
 public abstract class Persona {
     protected String nombre;
     protected String apellido;
-    protected int cuil;
+    protected long cuil;
     protected String direccion;
 
-    public int getCuil() {
+    public long getCuil() {
         return cuil;
     }
 
@@ -28,7 +28,7 @@ public abstract class Persona {
         this.cuil = legajo;
     }
 
-    public void modificarDatos (int cuil,String nom,String ape,String dire){
+    public void modificarDatos (long cuil,String nom,String ape,String dire){
         this.apellido = ape;
         this.nombre = nom;
         this.cuil = cuil;

@@ -1,0 +1,10 @@
+Concesionario{nombre='presta', cuil=23456785
+Coleccion de autos=
+[Auto{color='Blanco', modelo='Corola', marca='Toyota', matricula='DC 456 CD', disponibilidad=true, responsable=1234567890}
+, Auto{color='Negro', modelo='Civic', marca='Honda', matricula='DC 457 CD', disponibilidad=false, responsable=1234567890}
+]
+ Empleados=
+[]
+ Clientes=
+[]}
+

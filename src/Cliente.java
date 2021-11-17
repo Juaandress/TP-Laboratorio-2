@@ -4,7 +4,7 @@ public class Cliente extends Persona{
     LinkedList<Auto> coleccionautoAuto;
     LinkedList<Reserva> coleccionReserva;
 
-    public Cliente(String apellido,String nombre,String direccion,int cuil) {
+    public Cliente(String apellido,String nombre,String direccion,long cuil) {
         this.apellido= apellido;
         this.nombre = nombre;
         this.direccion = direccion;

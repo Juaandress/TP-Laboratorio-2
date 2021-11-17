@@ -4,7 +4,7 @@ public class Auto {
     String marca;
     String matricula;
     boolean disponibilidad;
-    int responsable;
+    long responsable;
 
     @Override
     public String toString() {
@@ -18,7 +18,7 @@ public class Auto {
                 '}'+"\n";
     }
 
-    public Auto(String color, String modelo, String marca, String matricula, boolean disponibilidad, int responsable) {
+    public Auto(String color, String modelo, String marca, String matricula, boolean disponibilidad, long responsable) {
         this.color = color;
         this.modelo = modelo;
         this.marca = marca;
@@ -67,11 +67,11 @@ public class Auto {
         this.disponibilidad = disponibilidad;
     }
 
-    public int getResponsable() {
+    public long getResponsable() {
         return responsable;
     }
 
-    public void setResponsable(int responsable) {
+    public void setResponsable(long responsable) {
         this.responsable = responsable;
     }
 }
