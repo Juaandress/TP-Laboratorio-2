@@ -2,7 +2,7 @@ public class Empleado extends Persona{
     String puesto;
     double salario;
 
-    public Empleado(String nombre,String apellido,String direccion,int cuil,String puesto, double salario) {
+    public Empleado(String nombre,String apellido,String direccion,String cuil,String puesto, double salario) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.cuil = cuil;

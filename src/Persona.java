@@ -1,10 +1,10 @@
 public abstract class Persona {
     protected String nombre;
     protected String apellido;
-    protected long cuil;
+    protected String cuil;
     protected String direccion;
 
-    public long getCuil() {
+    public String getCuil() {
         return cuil;
     }
 
@@ -24,11 +24,11 @@ public abstract class Persona {
         this.apellido = apellido;
     }
 
-    public void setLegajo(int legajo) {
+    public void setLegajo(String legajo) {
         this.cuil = legajo;
     }
 
-    public void modificarDatos (long cuil,String nom,String ape,String dire){
+    public void modificarDatos (String cuil,String nom,String ape,String dire){
         this.apellido = ape;
         this.nombre = nom;
         this.cuil = cuil;

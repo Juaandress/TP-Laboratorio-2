@@ -2,7 +2,7 @@ import java.util.LinkedList;
 
 public class Concesionario {
     String nombre;
-    int cuil;
+    String cuil;
     LinkedList<Auto> coleccionAuto;
     LinkedList<Empleado> coleccionEmpleado;
     LinkedList<Cliente> coleccionCliente;
@@ -18,7 +18,7 @@ public class Concesionario {
                 '}'+"\n";
     }
 
-    public Concesionario(String nombre, int cuil) {
+    public Concesionario(String nombre, String cuil) {
         this.nombre= nombre;
         this.cuil=cuil;
         this.coleccionAuto = new LinkedList<Auto>();//crea una coleccion vacia
@@ -29,6 +29,12 @@ public class Concesionario {
 
     public void agregarAuto(Auto auto){
         coleccionAuto.add(auto);
+    }
+    public void agregarEmpleado(Empleado empleado){
+        coleccionEmpleado.add(empleado);
+    }
+    public void agregarCliente(Cliente cliente){
+        coleccionCliente.add(cliente);
     }
 
     public void eliminarAuto(String matriculaAuto) {
@@ -47,7 +53,7 @@ public class Concesionario {
 
     public void encontrarAuto(String matriculaAuto) {
         boolean bandera = false;
-        Auto auto1 = new Auto(null,null,null,null,false,0);
+        Auto auto1 = new Auto(null,null,null,null,false,"54456465");
         for (Auto auto : coleccionAuto) {
             if (auto.getMatricula().equals(matriculaAuto)) {
                 bandera = true;
@@ -61,7 +67,7 @@ public class Concesionario {
         }else{System.out.println("No se encontró el auto");}
     }
 
-    public Concesionario(String nombre, int cuil, LinkedList<Auto> coleccionAuto, LinkedList<Empleado> coleccionEmpleado, LinkedList<Cliente> coleccionCliente) {
+    public Concesionario(String nombre, String cuil, LinkedList<Auto> coleccionAuto, LinkedList<Empleado> coleccionEmpleado, LinkedList<Cliente> coleccionCliente) {
         this.nombre = nombre;
         this.cuil = cuil;
         this.coleccionAuto = coleccionAuto;
@@ -77,11 +83,11 @@ public class Concesionario {
         this.nombre = nombre;
     }
 
-    public int getCuil() {
+    public String getCuil() {
         return cuil;
     }
 
-    public void setCuil(int cuil) {
+    public void setCuil(String cuil) {
         this.cuil = cuil;
     }
 

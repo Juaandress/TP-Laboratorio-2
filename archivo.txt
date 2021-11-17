@@ -4,7 +4,8 @@ Coleccion de autos=
 , Auto{color='Negro', modelo='Civic', marca='Honda', matricula='DC 457 CD', disponibilidad=false, responsable=1234567890}
 ]
  Empleados=
-[]
+[Empleado{puesto='jefe', salario=50000.0, nombre='fede', apellido='lezcano', cuil=12001231231, direccion='Obligado1246'}]
  Clientes=
-[]}
+[Cliente{coleccionautoAuto=[], coleccionReserva=[], nombre='jose', apellido='jose', cuil=1234564648, direccion='calle falsa 123'}
+]}
 
