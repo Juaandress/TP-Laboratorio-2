@@ -43,6 +43,6 @@ public class Cliente extends Persona{
                 ", apellido='" + apellido + '\'' +
                 ", cuil=" + cuil +
                 ", direccion='" + direccion + '\'' +
-                '}';
+                '}'+"\n";
     }
 }

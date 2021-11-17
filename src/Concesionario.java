@@ -12,10 +12,10 @@ public class Concesionario {
         return "Concesionario{" +
                 "nombre='" + nombre + '\'' +
                 ", cuil=" + cuil +
-                ", coleccionAuto=" + coleccionAuto +
-                ", coleccionEmpleado=" + coleccionEmpleado +
-                ", coleccionCliente=" + coleccionCliente +
-                '}';
+                "\nColeccion de autos=\n"+ coleccionAuto +
+                "\n Empleados=\n"+ coleccionEmpleado +
+                "\n Clientes=\n" + coleccionCliente +
+                '}'+"\n";
     }
 
     public Concesionario(String nombre, int cuil) {

@@ -71,6 +71,6 @@ public class Reserva {
                 ", fechainicio='" + fechainicio + '\'' +
                 ", fechafin='" + fechafin + '\'' +
                 ", precio=" + precio +
-                '}';
+                '}'+"\n";
     }
 }

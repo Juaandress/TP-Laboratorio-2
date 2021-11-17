@@ -15,7 +15,7 @@ public class Auto {
                 ", matricula='" + matricula + '\'' +
                 ", disponibilidad=" + disponibilidad +
                 ", responsable=" + responsable +
-                '}';
+                '}'+"\n";
     }
 
     public Auto(String color, String modelo, String marca, String matricula, boolean disponibilidad, int responsable) {
