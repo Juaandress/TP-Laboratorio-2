@@ -54,6 +54,122 @@ class LecturaArchivo {
                 //System.out.print(letra); /*Escribir el caracter actual*/
                 caracter = entrada.read(); /*avanzar un caracter*/
                 //analizar si en el texto va a venir el dato del color
+                if (caracter=='C'){
+                    caracter = entrada.read();
+                    if (caracter=='o'){
+                        caracter = entrada.read();
+                        if (caracter=='n'){
+                            caracter = entrada.read();
+                            if (caracter=='c'){
+                                caracter = entrada.read();
+                                if (caracter=='e'){
+                                    caracter = entrada.read();
+                                    if (caracter=='s'){
+                                        caracter = entrada.read();
+                                        if (caracter=='i'){
+                                            caracter = entrada.read();
+                                            if (caracter=='o'){
+                                                caracter = entrada.read();
+                                                if (caracter=='n'){
+                                                    caracter = entrada.read();
+                                                    if (caracter=='a'){
+                                                        caracter = entrada.read();
+                                                        if (caracter=='r'){
+                                                            caracter = entrada.read();
+                                                            if (caracter=='i'){
+                                                                caracter = entrada.read();
+                                                                if (caracter=='o'){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter=='{'){
+                                                                        caracter = entrada.read();
+
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (caracter=='n'){
+                    caracter = entrada.read();
+                    if (caracter=='o'){
+                        caracter = entrada.read();
+                        if (caracter=='m'){
+                            caracter = entrada.read();
+                            if (caracter=='b'){
+                                caracter = entrada.read();
+                                if (caracter=='r'){
+                                    caracter = entrada.read();
+                                    if (caracter=='e'){
+                                        caracter = entrada.read();
+                                        if (caracter=='='){
+                                            caracter = entrada.read();
+                                            if (caracter=='\''){
+                                                caracter = entrada.read();
+                                                while (caracter!='\''){
+                                                    caracter = entrada.read();
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (caracter=='\''){
+                    caracter = entrada.read();
+                    if (caracter==','){
+                        caracter = entrada.read();
+                        if (caracter==' '){
+                            caracter = entrada.read();
+
+                        }
+                    }
+                }
+                if (caracter=='c'){
+                    caracter = entrada.read();
+                    if (caracter=='u'){
+                        caracter = entrada.read();
+                        if (caracter=='i'){
+                            caracter = entrada.read();
+                            if (caracter=='l'){
+                                caracter = entrada.read();
+                                if (caracter=='='){
+                                    caracter = entrada.read();
+                                    while (caracter!='['){
+                                        caracter = entrada.read();
+                                    }
+                                    caracter = entrada.read();
+                                }
+                            }
+                        }
+                    }
+                }
+                if (caracter=='A'){
+                    caracter = entrada.read();
+                    if (caracter=='u'){
+                        caracter = entrada.read();
+                        if (caracter=='t'){
+                            caracter = entrada.read();
+                            if (caracter=='o'){
+                                caracter = entrada.read();
+                                if (caracter=='{'){
+                                    caracter = entrada.read();
+
+                                }
+                            }
+                        }
+                    }
+                }
+                //analizar el color del auto
                 if (caracter == 'c') {
                     caracter = entrada.read();
                     if (caracter == 'o') {
@@ -329,14 +445,17 @@ class LecturaArchivo {
                                                                     caracter = entrada.read();
                                                                     letra = (char) caracter;
                                                                 }
-                                                                Auto auto1 = new Auto(auxColor,auxModelo,auxMarca,auxMatricula,auxDisponible,auxResponsable);
-                                                                concesionario.agregarAuto(auto1);
+                                                                if (auxColor!=""){
+                                                                    Auto auto1 = new Auto(auxColor,auxModelo,auxMarca,auxMatricula,auxDisponible,auxResponsable);
+                                                                    concesionario.agregarAuto(auto1);
+                                                                    auxResponsable="";
+                                                                    auxColor = "";
+                                                                    auxModelo = "";
+                                                                    auxMarca = "";
+                                                                    auxMatricula = "";
 
-                                                                auxResponsable="";
-                                                                auxColor = "";
-                                                                auxModelo = "";
-                                                                auxMarca = "";
-                                                                auxMatricula = "";
+                                                                }
+
                                                             }
                                                         }
                                                     }
@@ -349,7 +468,10 @@ class LecturaArchivo {
                         }
                     }
                 }
+                //termina 1 auto
                 if (caracter == '}'){
+
+
                     caracter = entrada.read();
                 }
                 if (caracter == '\n'){
@@ -642,17 +764,22 @@ class LecturaArchivo {
                                                                     }
                                                                 }
                                                             }
+                                                            //termina empleado
                                                             if(caracter=='\''){
                                                                 caracter= entrada.read();
                                                             }
                                                             if (caracter=='}'){
-                                                                Empleado empleado1 = new Empleado(auxNombre,auxApellido,auxDireccion,auxCuil,auxPuesto,convertToLong(auxSalario));
-                                                                auxNombre="";
-                                                                auxApellido="";
-                                                                auxDireccion="";
-                                                                auxPuesto="";
-                                                                auxSalario="";
-                                                                auxCuil="";
+                                                                if (auxNombre!=""){
+                                                                    Empleado empleado1 = new Empleado(auxNombre,auxApellido,auxDireccion,auxCuil,auxPuesto,convertToLong(auxSalario));
+                                                                    concesionario.agregarEmpleado(empleado1);
+                                                                    auxNombre="";
+                                                                    auxApellido="";
+                                                                    auxDireccion="";
+                                                                    auxPuesto="";
+                                                                    auxSalario="";
+                                                                    auxCuil="";
+
+                                                                }
                                                                 caracter = entrada.read();
                                                                 letra = (char) caracter;
                                                                 if (caracter==','){
@@ -1028,14 +1155,7 @@ class LecturaArchivo {
                                                                                                                     caracter = entrada.read();
                                                                                                                     letra = (char) caracter;
                                                                                                                 }
-                                                                                                                Auto auto1 = new Auto(auxColor,auxModelo,auxMarca,auxMatricula,auxDisponible,auxResponsable);
-                                                                                                                concesionario.agregarAuto(auto1);
 
-                                                                                                                auxResponsable="";
-                                                                                                                auxColor = "";
-                                                                                                                auxModelo = "";
-                                                                                                                auxMarca = "";
-                                                                                                                auxMatricula = "";
                                                                                                             }
                                                                                                         }
                                                                                                     }
@@ -1212,6 +1332,24 @@ class LecturaArchivo {
                                                                                                             caracter= entrada.read();
                                                                                                             letra=(char) caracter;
                                                                                                         }
+                                                                                                        if(auxNombre!=""){
+                                                                                                            Cliente cliente1 = new Cliente(auxApellido,auxNombre,auxDireccion,auxCuil);
+                                                                                                            if (auxColor!=""){
+                                                                                                                Auto auto1 = new Auto(auxColor,auxModelo,auxMarca,auxMatricula,auxDisponible,auxResponsable);
+                                                                                                                auxResponsable="";
+                                                                                                                auxColor = "";
+                                                                                                                auxModelo = "";
+                                                                                                                auxMarca = "";
+                                                                                                                auxMatricula = "";
+                                                                                                                cliente1.agregarAuto(auto1);
+                                                                                                            }
+                                                                                                            concesionario.agregarCliente(cliente1);
+                                                                                                            auxNombre="";
+                                                                                                            auxApellido="";
+                                                                                                            auxDireccion="";
+                                                                                                            auxCuil="";
+
+                                                                                                        }
                                                                                                     }
                                                                                                 }
                                                                                             }
@@ -1227,11 +1365,7 @@ class LecturaArchivo {
                                                                 caracter= entrada.read();
                                                             }
                                                             if(caracter=='}'){
-                                                                Cliente cliente1 = new Cliente(auxApellido,auxNombre,auxDireccion,auxCuil);
-                                                                auxNombre="";
-                                                                auxApellido="";
-                                                                auxDireccion="";
-                                                                auxCuil="";
+
                                                                 caracter = entrada.read();
                                                                 letra = (char) caracter;
                                                             }
