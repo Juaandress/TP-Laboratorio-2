@@ -21,7 +21,9 @@ public class Main {
         accesoExternos.leeDatos();
         EscrituraArchivo escribeElArchivo = new EscrituraArchivo();
         escribeElArchivo.escribir(presta.toString());
-        accesoExternos.paraArchivo();
+        accesoExternos.paraArchivo(presta);
+        System.out.println("-------------------------");
+        System.out.println(presta.toString());
 
     }
 }

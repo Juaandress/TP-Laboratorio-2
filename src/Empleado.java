@@ -1,8 +1,8 @@
 public class Empleado extends Persona{
     String puesto;
-    double salario;
+    long salario;
 
-    public Empleado(String nombre,String apellido,String direccion,String cuil,String puesto, double salario) {
+    public Empleado(String nombre,String apellido,String direccion,String cuil,String puesto, long salario) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.cuil = cuil;
@@ -19,11 +19,11 @@ public class Empleado extends Persona{
         this.puesto = puesto;
     }
 
-    public double getSalario() {
+    public long getSalario() {
         return salario;
     }
 
-    public void setSalario(double salario) {
+    public void setSalario(long salario) {
         this.salario = salario;
     }
 
