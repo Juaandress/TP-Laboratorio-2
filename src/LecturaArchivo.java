@@ -668,6 +668,574 @@ class LecturaArchivo {
                                                             }
                                                         }
                                                         //while para clientes
+                                                        if (caracter== ']'){
+                                                            caracter = entrada.read();
+                                                            if (caracter=='C'){
+                                                                caracter = entrada.read();
+                                                                if (caracter=='l'){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter=='i'){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter=='e'){
+                                                                            caracter = entrada.read();
+                                                                            if (caracter=='n'){
+                                                                                caracter = entrada.read();
+                                                                                if (caracter=='t'){
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter=='e'){
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter=='{'){
+                                                                                            caracter = entrada.read();
+
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            if (caracter=='c'){
+                                                                caracter = entrada.read();
+                                                                if (caracter=='o'){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter=='l'){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter=='e'){
+                                                                            caracter = entrada.read();
+                                                                            if (caracter=='c'){
+                                                                                caracter = entrada.read();
+                                                                                if (caracter=='c'){
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter=='i'){
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter=='o'){
+                                                                                            caracter = entrada.read();
+                                                                                            if (caracter=='n'){
+                                                                                                caracter = entrada.read();
+                                                                                                if (caracter=='a'){
+                                                                                                    caracter = entrada.read();
+                                                                                                    if (caracter=='u'){
+                                                                                                        caracter = entrada.read();
+                                                                                                        if (caracter=='t'){
+                                                                                                            caracter = entrada.read();
+                                                                                                            if (caracter=='o'){
+                                                                                                                caracter = entrada.read();
+
+                                                                                                                if (caracter=='A'){
+                                                                                                                    caracter = entrada.read();
+                                                                                                                    if (caracter=='u'){
+                                                                                                                        caracter = entrada.read();
+                                                                                                                        if (caracter=='t'){
+                                                                                                                            caracter = entrada.read();
+                                                                                                                            if (caracter=='o'){
+                                                                                                                                caracter = entrada.read();
+                                                                                                                                if (caracter=='='){
+                                                                                                                                    caracter = entrada.read();
+
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            //coleccion auto
+                                                            while (caracter!=']'){
+                                                                if (caracter == 'c') {
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == 'o') {
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == 'l') {
+                                                                            caracter = entrada.read();
+                                                                            if (caracter == 'o') {
+                                                                                caracter = entrada.read();
+                                                                                if (caracter == 'r') {
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter == '=') {
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter == '\'') {
+                                                                                            caracter = entrada.read();
+                                                                                            letra = (char) caracter;
+                                                                                            //encontro el color
+                                                                                            while (caracter != '\'') {
+                                                                                                auxColor = auxColor + letra;
+                                                                                                caracter = entrada.read();
+                                                                                                letra = (char) caracter;
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+
+                                                                    }
+
+                                                                }
+                                                                if (caracter == '\''){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == ','){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == ' '){
+                                                                            caracter = entrada.read();
+
+                                                                        }
+                                                                    }
+                                                                }
+                                                                //analizar si en el texto va a venir el dato del modelo
+                                                                if (caracter == 'm') {
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == 'o') {
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == 'd') {
+                                                                            caracter = entrada.read();
+                                                                            if (caracter == 'e') {
+                                                                                caracter = entrada.read();
+                                                                                if (caracter == 'l') {
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter == 'o') {
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter == '=') {
+                                                                                            caracter = entrada.read();
+                                                                                            if (caracter == '\'') {
+                                                                                                caracter = entrada.read();
+                                                                                                letra = (char) caracter;
+                                                                                                while (caracter != '\'') {
+                                                                                                    auxModelo = auxModelo + letra;
+                                                                                                    caracter = entrada.read();
+                                                                                                    letra = (char) caracter;
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                if (caracter == '\''){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == ','){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == ' '){
+                                                                            caracter = entrada.read();
+
+                                                                        }
+                                                                    }
+                                                                }
+                                                                //analizar si en el texto va a venir el dato de marca
+                                                                if (caracter == 'm') {
+                                                                    caracter = entrada.read();
+                                                                    letra = (char) caracter;
+                                                                    if (caracter == 'a') {
+                                                                        caracter = entrada.read();
+                                                                        letra = (char) caracter;
+                                                                        if (caracter == 'r') {
+                                                                            caracter = entrada.read();
+                                                                            letra = (char) caracter;
+                                                                            if (caracter == 'c') {
+                                                                                caracter = entrada.read();
+                                                                                letra = (char) caracter;
+                                                                                if (caracter == 'a') {
+                                                                                    caracter = entrada.read();
+                                                                                    letra = (char) caracter;
+                                                                                    if (caracter == '=') {
+                                                                                        caracter = entrada.read();
+                                                                                        letra = (char) caracter;
+                                                                                        if (caracter == '\'') {
+                                                                                            caracter = entrada.read();
+                                                                                            letra = (char) caracter;
+                                                                                            while (caracter != '\'') {
+                                                                                                auxMarca = auxMarca + letra;
+                                                                                                caracter = entrada.read();
+                                                                                                letra = (char) caracter;
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                if (caracter == '\''){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == ','){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == ' '){
+                                                                            caracter = entrada.read();
+
+                                                                        }
+                                                                    }
+                                                                }
+                                                                //analizar si en el texto va a venir el dato de la matricula
+                                                                if (caracter == 'm') {
+                                                                    caracter = entrada.read();
+                                                                    letra = (char) caracter;
+                                                                    if (caracter == 'a') {
+                                                                        caracter = entrada.read();
+                                                                        letra = (char) caracter;
+                                                                        if (caracter == 't') {
+                                                                            caracter = entrada.read();
+                                                                            letra = (char) caracter;
+                                                                            if (caracter == 'r') {
+                                                                                caracter = entrada.read();
+                                                                                letra = (char) caracter;
+                                                                                if (caracter == 'i') {
+                                                                                    caracter = entrada.read();
+                                                                                    letra = (char) caracter;
+                                                                                    if (caracter == 'c') {
+                                                                                        caracter = entrada.read();
+                                                                                        letra = (char) caracter;
+                                                                                        if (caracter == 'u') {
+                                                                                            caracter = entrada.read();
+                                                                                            letra = (char) caracter;
+                                                                                            if (caracter == 'l') {
+                                                                                                caracter = entrada.read();
+                                                                                                letra = (char) caracter;
+                                                                                                if (caracter == 'a') {
+                                                                                                    caracter = entrada.read();
+                                                                                                    letra = (char) caracter;
+                                                                                                    if (caracter == '=') {
+                                                                                                        caracter = entrada.read();
+                                                                                                        letra = (char) caracter;
+                                                                                                        if (caracter == '\'') {
+                                                                                                            caracter = entrada.read();
+                                                                                                            letra = (char) caracter;
+                                                                                                            while (caracter != '\'') {
+                                                                                                                auxMatricula = auxMatricula + letra;
+                                                                                                                caracter = entrada.read();
+                                                                                                                letra = (char) caracter;
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                if (caracter == '\''){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == ','){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == ' '){
+                                                                            caracter = entrada.read();
+
+                                                                        }
+                                                                    }
+                                                                }
+                                                                //analizar si en el texto va a venir el dato del estado de disponibilidad
+                                                                if (caracter == 'd') {
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == 'i') {
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == 's') {
+                                                                            caracter = entrada.read();
+                                                                            if (caracter == 'p') {
+                                                                                caracter = entrada.read();
+                                                                                if (caracter == 'o') {
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter == 'n') {
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter == 'i') {
+                                                                                            caracter = entrada.read();
+                                                                                            if (caracter == 'b') {
+                                                                                                caracter = entrada.read();
+                                                                                                if (caracter == 'i') {
+                                                                                                    caracter = entrada.read();
+                                                                                                    if (caracter == 'l') {
+                                                                                                        caracter = entrada.read();
+                                                                                                        if (caracter == 'i') {
+                                                                                                            caracter = entrada.read();
+                                                                                                            if (caracter == 'd') {
+                                                                                                                caracter = entrada.read();
+                                                                                                                if (caracter == 'a') {
+                                                                                                                    caracter = entrada.read();
+                                                                                                                    if (caracter == 'd') {
+                                                                                                                        caracter = entrada.read();
+                                                                                                                        if (caracter == '=') {
+                                                                                                                            caracter = entrada.read();
+                                                                                                                            letra = (char) caracter;
+                                                                                                                            while (caracter != ',') {
+                                                                                                                                if (letra=='t'){
+                                                                                                                                    auxDisponible = true;
+                                                                                                                                }else{
+                                                                                                                                    auxDisponible = false;
+                                                                                                                                }
+                                                                                                                                caracter = entrada.read();
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                //saltar la coma
+                                                                if (caracter == ','){
+                                                                    caracter = entrada.read();
+                                                                }
+                                                                //analizar responsable
+                                                                if (caracter == 'r') {
+                                                                    caracter = entrada.read();
+                                                                    if (caracter == 'e') {
+                                                                        caracter = entrada.read();
+                                                                        if (caracter == 's') {
+                                                                            caracter = entrada.read();
+                                                                            if (caracter == 'p') {
+                                                                                caracter = entrada.read();
+                                                                                if (caracter == 'o') {
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter == 'n') {
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter == 's') {
+                                                                                            caracter = entrada.read();
+                                                                                            if (caracter == 'a') {
+                                                                                                caracter = entrada.read();
+                                                                                                if (caracter == 'b') {
+                                                                                                    caracter = entrada.read();
+                                                                                                    if (caracter == 'l') {
+                                                                                                        caracter = entrada.read();
+                                                                                                        if (caracter == 'e') {
+                                                                                                            caracter = entrada.read();
+                                                                                                            if (caracter == '=') {
+                                                                                                                caracter = entrada.read();
+                                                                                                                letra = (char) caracter;
+                                                                                                                while (caracter != '}') {
+                                                                                                                    auxResponsable = auxResponsable+letra;
+                                                                                                                    caracter = entrada.read();
+                                                                                                                    letra = (char) caracter;
+                                                                                                                }
+                                                                                                                Auto auto1 = new Auto(auxColor,auxModelo,auxMarca,auxMatricula,auxDisponible,auxResponsable);
+                                                                                                                concesionario.agregarAuto(auto1);
+
+                                                                                                                auxResponsable="";
+                                                                                                                auxColor = "";
+                                                                                                                auxModelo = "";
+                                                                                                                auxMarca = "";
+                                                                                                                auxMatricula = "";
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                                if (caracter == '}'){
+                                                                    caracter = entrada.read();
+                                                                }
+                                                                if (caracter == '\n'){
+                                                                    caracter = entrada.read();
+                                                                    letra = (char) caracter;
+                                                                }else {
+                                                                    if (caracter!=']'){
+                                                                        caracter = entrada.read();
+                                                                    }
+                                                                }
+                                                            }
+                                                            if (caracter==']'){
+                                                                caracter = entrada.read();
+                                                                if (caracter==','){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter==' '){
+                                                                        caracter = entrada.read();
+
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            if (caracter=='n'){
+                                                                caracter = entrada.read();
+                                                                if (caracter=='o'){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter=='m'){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter=='b'){
+                                                                            caracter = entrada.read();
+                                                                            if (caracter=='r'){
+                                                                                caracter = entrada.read();
+                                                                                if (caracter=='e'){
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter=='='){
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter=='\''){
+                                                                                            caracter = entrada.read();
+                                                                                            letra=(char) caracter;
+                                                                                            while (caracter!='\''){
+                                                                                                auxNombre=auxNombre+letra;
+                                                                                                caracter = entrada.read();
+                                                                                                letra=(char) caracter;
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            if (caracter=='\''){
+                                                                caracter = entrada.read();
+                                                                if (caracter==','){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter==' '){
+                                                                        caracter = entrada.read();
+
+                                                                    }
+                                                                }
+                                                            }
+                                                            if (caracter=='a'){
+                                                                caracter = entrada.read();
+                                                                if (caracter=='p'){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter=='e'){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter=='l'){
+                                                                            caracter = entrada.read();
+                                                                            if (caracter=='l'){
+                                                                                caracter = entrada.read();
+                                                                                if (caracter=='i'){
+                                                                                    caracter = entrada.read();
+                                                                                    if (caracter=='d'){
+                                                                                        caracter = entrada.read();
+                                                                                        if (caracter=='o'){
+                                                                                            caracter = entrada.read();
+                                                                                            if (caracter=='='){
+                                                                                                caracter = entrada.read();
+                                                                                                if (caracter=='\''){
+                                                                                                    caracter = entrada.read();
+                                                                                                    letra= (char) caracter;
+                                                                                                    while (caracter!='\''){
+                                                                                                        auxApellido=auxApellido+letra;
+                                                                                                        caracter = entrada.read();
+                                                                                                        letra= (char) caracter;
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            if (caracter=='\''){
+                                                                caracter = entrada.read();
+                                                                if (caracter==','){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter==' '){
+                                                                        caracter = entrada.read();
+
+                                                                    }
+                                                                }
+                                                            }
+                                                            if (caracter=='c'){
+                                                                caracter = entrada.read();
+                                                                if (caracter=='u'){
+                                                                    caracter = entrada.read();
+                                                                    if (caracter=='i'){
+                                                                        caracter = entrada.read();
+                                                                        if (caracter=='l'){
+                                                                            caracter = entrada.read();
+                                                                            if (caracter=='='){
+                                                                                caracter = entrada.read();
+                                                                                letra=(char) caracter;
+                                                                                while (caracter!=','){
+                                                                                    auxCuil=auxCuil+letra;
+                                                                                    caracter = entrada.read();
+                                                                                    letra=(char) caracter;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            if(caracter==','){
+                                                                caracter = entrada.read();
+                                                                if(caracter==' '){
+                                                                    caracter = entrada.read();
+                                                                }
+                                                            }
+                                                            if(caracter=='d'){
+                                                                caracter = entrada.read();
+                                                                if(caracter=='i'){
+                                                                    caracter = entrada.read();
+                                                                    if(caracter=='r'){
+                                                                        caracter = entrada.read();
+                                                                        if(caracter=='e'){
+                                                                            caracter = entrada.read();
+                                                                            if(caracter=='c'){
+                                                                                caracter = entrada.read();
+                                                                                if(caracter=='c'){
+                                                                                    caracter = entrada.read();
+                                                                                    if(caracter=='i'){
+                                                                                        caracter = entrada.read();
+                                                                                        if(caracter=='o'){
+                                                                                            caracter = entrada.read();
+                                                                                            if(caracter=='n'){
+                                                                                                caracter = entrada.read();
+                                                                                                if(caracter=='='){
+                                                                                                    caracter = entrada.read();
+                                                                                                    if(caracter=='\''){
+                                                                                                        caracter = entrada.read();
+                                                                                                        letra=(char) caracter;
+                                                                                                        while (caracter!='\''){
+                                                                                                            auxDireccion=auxDireccion+letra;
+                                                                                                            caracter= entrada.read();
+                                                                                                            letra=(char) caracter;
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            if(caracter=='\''){
+                                                                caracter= entrada.read();
+                                                            }
+                                                            if(caracter=='}'){
+                                                                Cliente cliente1 = new Cliente(auxApellido,auxNombre,auxDireccion,auxCuil);
+                                                                auxNombre="";
+                                                                auxApellido="";
+                                                                auxDireccion="";
+                                                                auxCuil="";
+                                                                caracter = entrada.read();
+                                                                letra = (char) caracter;
+                                                            }
+                                                        }
                                                     }
 
                                                 }

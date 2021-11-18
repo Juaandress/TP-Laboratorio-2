@@ -2,20 +2,27 @@ import java.util.LinkedList;
 
 public class Reserva {
     LinkedList<Auto> coleccionAuto;
-    LinkedList<Cliente> coleccionCliente;
+    Cliente coleccionCliente;
     String fechainicio;
     String fechafin;
-    boolean precio;
+    long precio;
 
-    public Reserva(String fechainicio, String fechafin, boolean precio) {
+    public void agregarCliente(Cliente cliente){
+        this.coleccionCliente= cliente;
+    }
+
+    public void agregarAuto(Auto auto){
+        coleccionAuto.add(auto);
+    }
+
+    public Reserva(String fechainicio, String fechafin, long precio) {
         this.coleccionAuto = new LinkedList<Auto>();//crea una coleccion vacia
-        this.coleccionCliente = new LinkedList<Cliente>();//crea una coleccion vacia
         this.fechainicio = fechainicio;
         this.fechafin = fechafin;
         this.precio = precio;
     }
 
-    public Reserva(LinkedList<Auto> coleccionAuto, LinkedList<Cliente> coleccionCliente, String fechainicio, String fechafin, boolean precio) {
+    public Reserva(LinkedList<Auto> coleccionAuto, Cliente coleccionCliente, String fechainicio, String fechafin, long precio) {
         this.coleccionAuto = coleccionAuto;
         this.coleccionCliente = coleccionCliente;
         this.fechainicio = fechainicio;
@@ -31,11 +38,11 @@ public class Reserva {
         this.coleccionAuto = coleccionAuto;
     }
 
-    public LinkedList<Cliente> getColeccionCliente() {
+    public Cliente getColeccionCliente() {
         return coleccionCliente;
     }
 
-    public void setColeccionCliente(LinkedList<Cliente> coleccionCliente) {
+    public void setColeccionCliente(Cliente coleccionCliente) {
         this.coleccionCliente = coleccionCliente;
     }
 
@@ -55,11 +62,11 @@ public class Reserva {
         this.fechafin = fechafin;
     }
 
-    public boolean isPrecio() {
+    public long isPrecio() {
         return precio;
     }
 
-    public void setPrecio(boolean precio) {
+    public void setPrecio(long precio) {
         this.precio = precio;
     }
 

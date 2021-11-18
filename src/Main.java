@@ -16,6 +16,10 @@ public class Main {
         presta.agregarCliente(cliente1);
 
         //System.out.println(presta.toString());
+        Reserva reserva1 = new Reserva("19/05/05","19/05/11",50000);
+        reserva1.agregarAuto(auto1);
+        reserva1.agregarCliente(cliente1);
+
 
         LecturaArchivo accesoExternos = new LecturaArchivo();
         accesoExternos.leeDatos();
