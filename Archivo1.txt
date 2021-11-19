@@ -6,7 +6,6 @@ Coleccion de autos=
  Empleados=
 [Empleado{puesto='jefe', salario=50000, nombre='fede', apellido='lezcano', cuil=12001231231, direccion='Obligado1246'}]
  Clientes=
-[Cliente{coleccionautoAuto=[Auto{color='', modelo='', marca='', matricula='', disponibilidad=false, responsable=}
-], nombre='jose', apellido='jose', cuil=1234564648, direccion='calle falsa 123'}
+[Cliente{coleccionautoAuto=[], nombre='jose', apellido='jose', cuil=1234564648, direccion='calle falsa 123'}
 ]}
 

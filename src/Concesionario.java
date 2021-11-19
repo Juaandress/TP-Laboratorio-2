@@ -6,6 +6,70 @@ public class Concesionario {
     LinkedList<Auto> coleccionAuto;
     LinkedList<Empleado> coleccionEmpleado;
     LinkedList<Cliente> coleccionCliente;
+    static boolean bandera=false;
+
+    public static void eliminarCliente(LinkedList<Cliente> lista, String cuil) {
+        for(Cliente automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getCuil().equals(cuil)) {
+                lista.remove();
+                bandera=true;
+            }
+        }
+        // si no se encontró retornar falso
+        if (bandera) {
+            System.out.println("Cliente no encotrado");
+            bandera=false;
+        }
+    }
+    public static void eliminarEmpleado(LinkedList<Empleado> lista, String cuil) {
+        for(Empleado automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getCuil().equals(cuil)) {
+                lista.remove();
+                bandera=true;
+            }
+        }
+        // si no se encontró retornar falso
+        if (bandera) {
+            System.out.println("Empleado no encotrado");
+            bandera=false;
+        }
+    }
+    public static void eliminarAuto(LinkedList<Auto> lista, String cuil) {
+        for(Auto automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getMatricula().equals(cuil)) {
+                lista.remove();
+                bandera=true;
+            }
+        }
+        // si no se encontró retornar falso
+        if (bandera) {
+            System.out.println("Auto no encotrado");
+            bandera=false;
+        }
+    }
+
+    public static void listarDisponible(LinkedList<Auto> lista){
+
+        for(Auto automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.isDisponibilidad()) {
+                bandera=true;
+                System.out.println(automovil.toString());
+            };
+        }
+        // si no se encontró retornar falso
+        if (!bandera) {
+            System.out.println("Auto no encotrado");
+            bandera=false;
+        }
+    }
 
     @Override
     public String toString() {
@@ -16,6 +80,42 @@ public class Concesionario {
                 "\n Empleados=\n"+ coleccionEmpleado +
                 "\n Clientes=\n" + coleccionCliente +
                 '}'+"\n";
+    }
+
+    public static Auto buscarAuto(LinkedList<Auto> lista, String clave){
+
+        for(Auto automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getMatricula().equals(clave)) return automovil;
+        }
+        // si no se encontró retornar falso
+        System.out.println("Auto no encotrado");
+        return null;
+    }
+
+    public static Empleado buscarEmpleado(LinkedList<Empleado> lista, String clave){
+
+        for(Empleado automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getCuil().equals(clave)) return automovil;
+        }
+        // si no se encontró retornar falso
+        System.out.println("Empleado no encotrado");
+        return null;
+    }
+
+    public static Cliente buscarCliente(LinkedList<Cliente> lista, String clave){
+
+        for(Cliente automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getCuil().equals(clave)) return automovil;
+        }
+        // si no se encontró retornar falso
+        System.out.println("Cliente no encotrado");
+        return null;
     }
 
     public Concesionario(String nombre, String cuil) {
@@ -49,22 +149,6 @@ public class Concesionario {
         if (bandera){
             System.out.println("Se encontró el auto a eliminar");
         }else{System.out.println("No se encontró el auto a eliminar");}
-    }
-
-    public void encontrarAuto(String matriculaAuto) {
-        boolean bandera = false;
-        Auto auto1 = new Auto(null,null,null,null,false,"54456465");
-        for (Auto auto : coleccionAuto) {
-            if (auto.getMatricula().equals(matriculaAuto)) {
-                bandera = true;
-                auto1=auto;
-                break;
-            }
-        }
-        if (bandera){
-            System.out.println("Se encontró el auto");
-            auto1.toString();
-        }else{System.out.println("No se encontró el auto");}
     }
 
     public Concesionario(String nombre, String cuil, LinkedList<Auto> coleccionAuto, LinkedList<Empleado> coleccionEmpleado, LinkedList<Cliente> coleccionCliente) {
