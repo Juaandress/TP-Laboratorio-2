@@ -8,13 +8,16 @@ public class Main {
 
 
         LecturaArchivo accesoExternos = new LecturaArchivo();
-        //accesoExternos.leeDatos();
+        System.out.println("El consesionario se encuetra de esta manera:");
+        accesoExternos.leeDatos();
         accesoExternos.paraArchivo(presta);
         //EscrituraArchivo escribeElArchivo = new EscrituraArchivo();
         //escribeElArchivo.escribir(presta.toString(),"Archivo1.txt");
         Menu menu = new Menu();
         //menu.iniciarMenu(presta);
         menu.iniciarMenu(presta);
+        System.out.println("El consesionario se encuetra de esta manera:");
+        System.out.println(presta.toString());
 
     }
 }

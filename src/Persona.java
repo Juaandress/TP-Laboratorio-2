@@ -28,7 +28,19 @@ public abstract class Persona {
         this.cuil = legajo;
     }
 
-    public void modificarDatos (String cuil,String nom,String ape,String dire){
+    public void setCuil(String cuil) {
+        this.cuil = cuil;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public void modificarDatos (String cuil, String nom, String ape, String dire){
         this.apellido = ape;
         this.nombre = nom;
         this.cuil = cuil;

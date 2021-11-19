@@ -67,12 +67,12 @@ public class Menu {
                     System.out.println("ingrese el cuil del responsable del auto");
                     responsable=scan.nextLine();
                     Auto auto1 = new Auto(color,modelo,marca,matricula,true,responsable);
-                    concesionario.agregarAuto(auto1);
+                    Concesionario.agregarAuto(auto1);
                     break;
                 case 4:
                     System.out.println("ingrese el auto a buscar");
                     matricula=scan.nextLine();
-                    System.out.println(Objects.requireNonNull(Concesionario.buscarEmpleado(concesionario.coleccionEmpleado, matricula)).toString());
+                    System.out.println(Objects.requireNonNull(Concesionario.buscarAuto(Concesionario.coleccionAuto, matricula)).toString());
                     break;
                 case 5:
                     System.out.println("ingrese el cuil del cliente a buscar");
@@ -97,25 +97,25 @@ public class Menu {
                 case 9:
                     System.out.println("ingrese la matricula del auto a eliminar");
                     matricula= scan.nextLine();
-                    Concesionario.eliminarAuto(concesionario.coleccionAuto, matricula);
+                    Concesionario.eliminarAuto(Concesionario.coleccionAuto, matricula);
                     break;
                 case 10:
-                    Concesionario.listarDisponible(concesionario.coleccionAuto);
+                    Concesionario.listarDisponible(Concesionario.coleccionAuto);
                     break;
                 case 11:
                     System.out.println("ingrese el auto a modificar");
                     matricula=scan.nextLine();
-                    Concesionario.buscarEmpleado(concesionario.coleccionEmpleado,matricula);
+                    Concesionario.modificarAuto(concesionario.getColeccionAuto(),matricula);
                     break;
                 case 12:
                     System.out.println("ingrese el cliente a modificar");
-                    matricula=scan.nextLine();
-                    Concesionario.buscarEmpleado(concesionario.coleccionEmpleado,matricula);
+                    cuil=scan.nextLine();
+                    Concesionario.modificarCliente(concesionario.getColeccionCliente(),cuil);
                     break;
                 case 13:
                     System.out.println("ingrese el empleado a modificar");
-                    matricula=scan.nextLine();
-                    Concesionario.buscarEmpleado(concesionario.coleccionEmpleado,matricula);
+                    cuil=scan.nextLine();
+                    Concesionario.modificarEmpleado(concesionario.coleccionEmpleado,cuil);
                     break;
                 default:
                     break;

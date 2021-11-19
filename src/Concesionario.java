@@ -1,9 +1,10 @@
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Concesionario {
     String nombre;
     String cuil;
-    LinkedList<Auto> coleccionAuto;
+    static LinkedList<Auto> coleccionAuto;
     LinkedList<Empleado> coleccionEmpleado;
     LinkedList<Cliente> coleccionCliente;
     static boolean bandera=false;
@@ -20,7 +21,7 @@ public class Concesionario {
         // si no se encontró retornar falso
         if (bandera) {
             System.out.println("Cliente no encotrado");
-            bandera=false;
+
         }
     }
     public static void eliminarEmpleado(LinkedList<Empleado> lista, String cuil) {
@@ -35,7 +36,7 @@ public class Concesionario {
         // si no se encontró retornar falso
         if (bandera) {
             System.out.println("Empleado no encotrado");
-            bandera=false;
+
         }
     }
     public static void eliminarAuto(LinkedList<Auto> lista, String cuil) {
@@ -50,7 +51,7 @@ public class Concesionario {
         // si no se encontró retornar falso
         if (bandera) {
             System.out.println("Auto no encotrado");
-            bandera=false;
+
         }
     }
 
@@ -67,7 +68,7 @@ public class Concesionario {
         // si no se encontró retornar falso
         if (!bandera) {
             System.out.println("Auto no encotrado");
-            bandera=false;
+
         }
     }
 
@@ -80,6 +81,119 @@ public class Concesionario {
                 "\n Empleados=\n"+ coleccionEmpleado +
                 "\n Clientes=\n" + coleccionCliente +
                 '}'+"\n";
+    }
+    public static void modificarAuto(LinkedList<Auto> lista, String clave){
+        Scanner scan = new Scanner(System.in);
+        String modelo,color,marca,matricula,responsable;
+        boolean disponibilidad;
+        System.out.println("ingrese el nuevo color");
+        color=scan.nextLine();
+        System.out.println("ingrese el nuevo modelo");
+        modelo=scan.nextLine();
+        System.out.println("ingrese el nuevo marca");
+        marca=scan.nextLine();
+        System.out.println("ingrese el nuevo direccion");
+        matricula=scan.nextLine();
+        System.out.println("ingrese el nuevo responsable");
+        responsable=scan.nextLine();
+        System.out.println("ingrese 1 si esta disponible 2 si no lo esta");
+        int x=scan.nextInt();
+        if (x==1){
+            disponibilidad=true;
+        }else {
+            disponibilidad=false;
+        }
+
+        for(Auto automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getMatricula().equals(clave)) {
+                automovil.setColor(color);
+                automovil.setDisponibilidad(disponibilidad);
+                automovil.setMarca(marca);
+                automovil.setMatricula(matricula);
+                automovil.setModelo(modelo);
+                automovil.setResponsable(responsable);
+                System.out.println("auto modificado");
+                bandera=true;
+            }
+        }
+        // si no se encontró retornar falso
+        if (!bandera){
+            System.out.println("Auto no encotrado");
+
+        }
+
+    }
+    public static void modificarEmpleado(LinkedList<Empleado> lista, String clave){
+        Scanner scan = new Scanner(System.in);
+        String puesto,nombre,apellido,direccion,cuil;
+        long sueldo;
+        System.out.println("ingrese el nuevo nombre");
+        nombre=scan.nextLine();
+        System.out.println("ingrese el nuevo apellido");
+        apellido=scan.nextLine();
+        System.out.println("ingrese el nuevo puesto");
+        puesto=scan.nextLine();
+        System.out.println("ingrese la nueva direccion");
+        direccion=scan.nextLine();
+        System.out.println("ingrese el nuevo cuil");
+        cuil=scan.nextLine();
+        System.out.println("ingrese el nuevo sueldo");
+        sueldo= scan.nextInt();
+        for(Empleado automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getCuil().equals(clave)) {
+                automovil.setPuesto(puesto);
+                automovil.setSalario(automovil.salario);
+                automovil.setNombre(nombre);
+                automovil.setApellido(apellido);
+                automovil.setDireccion(direccion);
+                automovil.setCuil(cuil);
+                System.out.println("empleado modificado");
+                bandera=true;
+            }
+        }
+        // si no se encontró retornar falso
+        if (!bandera){
+            System.out.println("Empleado no encotrado");
+
+        }
+
+    }
+
+    public static void modificarCliente(LinkedList<Cliente> lista, String clave){
+        Scanner scan = new Scanner(System.in);
+        String puesto,nombre,apellido,direccion,cuil;
+        long sueldo;
+        System.out.println("ingrese el nuevo nombre");
+        nombre=scan.nextLine();
+        System.out.println("ingrese el nuevo apellido");
+        apellido=scan.nextLine();
+        System.out.println("ingrese la nueva direccion");
+        direccion=scan.nextLine();
+        System.out.println("ingrese el nuevo cuil");
+        cuil=scan.nextLine();
+
+        for(Cliente automovil : lista){
+            // obtener el nombre del automovil para
+            // compararlo con la clave si coincide retornar verdadero
+            if(automovil.getCuil().equals(clave)) {
+                automovil.setNombre(nombre);
+                automovil.setApellido(apellido);
+                automovil.setDireccion(direccion);
+                automovil.setCuil(cuil);
+                System.out.println("empleado modificado");
+                bandera=true;
+            }
+        }
+        // si no se encontró retornar falso
+        if (!bandera){
+            System.out.println("Empleado no encotrado");
+
+        }
+
     }
 
     public static Auto buscarAuto(LinkedList<Auto> lista, String clave){
@@ -127,7 +241,7 @@ public class Concesionario {
 
     }
 
-    public void agregarAuto(Auto auto){
+    public static void agregarAuto(Auto auto){
         coleccionAuto.add(auto);
     }
     public void agregarEmpleado(Empleado empleado){
@@ -137,19 +251,6 @@ public class Concesionario {
         coleccionCliente.add(cliente);
     }
 
-    public void eliminarAuto(String matriculaAuto) {
-        boolean bandera = false;
-        for (Auto auto : coleccionAuto) {
-            if (auto.getMatricula().equals(matriculaAuto)) {
-                coleccionAuto.remove(auto);
-                bandera = true;
-                break;
-            }
-        }
-        if (bandera){
-            System.out.println("Se encontró el auto a eliminar");
-        }else{System.out.println("No se encontró el auto a eliminar");}
-    }
 
     public Concesionario(String nombre, String cuil, LinkedList<Auto> coleccionAuto, LinkedList<Empleado> coleccionEmpleado, LinkedList<Cliente> coleccionCliente) {
         this.nombre = nombre;
