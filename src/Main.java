@@ -8,7 +8,7 @@ public class Main {
 
 
         LecturaArchivo accesoExternos = new LecturaArchivo();
-        accesoExternos.leeDatos();
+        //accesoExternos.leeDatos();
         accesoExternos.paraArchivo(presta);
         //EscrituraArchivo escribeElArchivo = new EscrituraArchivo();
         //escribeElArchivo.escribir(presta.toString(),"Archivo1.txt");
