@@ -94,6 +94,7 @@ public class Menu {
                     cuil= scan.nextLine();
                     Concesionario.eliminarEmpleado(concesionario.coleccionEmpleado, cuil);
                     break;
+
                 case 9:
                     System.out.println("ingrese la matricula del auto a eliminar");
                     matricula= scan.nextLine();
